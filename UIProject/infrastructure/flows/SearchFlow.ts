@@ -69,7 +69,7 @@ export class SearchFlow {
    */
   async openWikiPageBySearch(searchText: string): Promise<void> {
     const searchTextWithFirstCapitalLetter = this.stringExtensions.capitalizeTheFirstLetter(searchText);
-    const locator = this.page.locator(`//a[h3[text()="${searchTextWithFirstCapitalLetter}"] and .//span[text()="Wikipedia"]]`);
+    const locator = this.page.locator(`//a[h3[text()="${searchTextWithFirstCapitalLetter}"] and .//span[text()="Wikipedia"]]`).first();
     await expect(locator).toBeVisible();
     await locator.click();
   }
@@ -95,7 +95,7 @@ export class SearchFlow {
    * @returns {Promise<void>}
    */
   private async clickSearchField(): Promise<void> {
-    const searchField = this.page.getByTitle('Search'); // Buscar
+    const searchField = this.page.getByRole('combobox');
     await expect(searchField).toBeVisible();
     await searchField.click();
   }

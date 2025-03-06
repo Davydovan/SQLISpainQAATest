@@ -17,22 +17,13 @@ export class PetTasks {
     this.apiRequest = apiRequest;
   }
 
-  
-  // baseURL: 'https://petstore.swagger.io/v2/',
-  // extraHTTPHeaders: {
-  //    "Content-Type": "application/json",
-  //     "accept": "application/json"
-
   /**
    * Retrieves pets by their status from the API.
    * @param {string} status - The status of the pets to retrieve (e.g., "available", "pending", "sold").
    * @returns {Promise<PetDataModel[]>} A promise that resolves to an array of PetDataModel instances.
    */
   async getPetsByStatus(status: string): Promise<PetDataModel[]> {
-    const response = await this.apiRequest.get(`https://petstore.swagger.io/v2/pet/findByStatus`, {headers:{
-      "Content-Type": "application/json",
-      "accept": "application/json"
-    }, params: { status: status } });
+    const response = await this.apiRequest.get(`./pet/findByStatus`, { params: { status: status } });
     expect(response.status()).toBe(200);
     const json = await response.json();
     return this.fromJsonToArray(json);
