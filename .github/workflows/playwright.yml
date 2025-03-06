@@ -12,9 +12,13 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: lts/*
+        node-version: lts/*    
     - name: Install dependencies
       run: npm ci --force
+    - name: Install faker
+      run: npm i @faker-js/faker 
+    - name: Install axios
+      run: npm i axios      
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests
