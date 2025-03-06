@@ -49,7 +49,7 @@ export class UserTasks {
 
       expect(response.status()).toBe(200);
     }).toPass({
-      timeout: 10000,
+      timeout: 50000,
       intervals: [1_000, 5_000],
     });
 

@@ -95,7 +95,7 @@ export class SearchFlow {
    * @returns {Promise<void>}
    */
   private async clickSearchField(): Promise<void> {
-    const searchField = this.page.getByTitle('Buscar');
+    const searchField = this.page.getByTitle('Search'); // Buscar
     await expect(searchField).toBeVisible();
     await searchField.click();
   }
