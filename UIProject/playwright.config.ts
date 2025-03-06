@@ -39,13 +39,6 @@ export default defineConfig({
         ...devices["Desktop Firefox"],
         viewport: { width: 1920, height: 1080 }, // Set full screen resolution
         headless: false,
-        launchOptions: {
-        args: [
-          '--disable-site-isolation-trials',
-          '--disable-features=site-per-process,SitePerProcess',
-          '--disable-blink-features=AutomationControlled',
-        ],
-      },
        },
     },
 
@@ -55,13 +48,6 @@ export default defineConfig({
         ...devices["Desktop Safari"],
         viewport: { width: 1920, height: 1080 }, // Set full screen resolution
         headless: false,
-        launchOptions: {
-        args: [
-          '--disable-site-isolation-trials',
-          '--disable-features=site-per-process,SitePerProcess',
-          '--disable-blink-features=AutomationControlled',
-        ],
-      },
       },
     },
   ]

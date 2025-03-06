@@ -22,7 +22,7 @@ export class CookiesPopupFlow {
    */
   async acceptCookies() {
     // Locate the accept cookies button by its role and name
-    const acceptButton = this.page.getByRole('button', { name: 'Aceptar todo' });
+    const acceptButton = this.page.locator('#L2AGLb');
 
     // Check if the accept button is visible and click it if so
     if (await acceptButton.isVisible()) {

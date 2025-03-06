@@ -1,4 +1,4 @@
-import { PetDataModel } from "./PetDataModel";
+import { PetDataModel } from "../dataModels/PetDataModel";
 
 /**
  * A class to count and filter pet names based on their occurrences.
