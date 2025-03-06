@@ -1,0 +1,20 @@
+{
+  "name": "apiproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.9"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.5.1"
+  },
+  "scripts": {
+    "test-cli": "npx playwright test",
+    "test-html-report": "playwright show-report"
+  }
+}

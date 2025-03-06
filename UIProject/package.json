@@ -1,0 +1,21 @@
+{
+  "name": "sqlispainqaatest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.9"
+  },
+  "dependencies": {
+    "playwright-recaptcha-solver": "https://github.com/xrip/puppeteer-recaptcha-solver.git"
+  },  
+  "scripts": {
+    "test-ui": "playwright test --ui",
+    "test-cli": "playwright test",
+    "test-html-report": "playwright show-report"
+  }
+}

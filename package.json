@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.13.9"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.50.1",
+    "2captcha": "^3.0.5-2",
+    "2captcha-node": "^2.2.1",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^0.0.1"
+  }
+}
