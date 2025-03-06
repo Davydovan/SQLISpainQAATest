@@ -23,7 +23,10 @@ export class UserTasks {
   async createUser(data: UserDataModel): Promise<void> {
     const userData = data.serialize();
 
-    const response = await this.apiRequest.post("./user", {
+    const response = await this.apiRequest.post("https://petstore.swagger.io/v2/user", {headers:{
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    },
       data: userData
     });
 
@@ -36,7 +39,10 @@ export class UserTasks {
    * @returns {Promise<UserDataModel>} A promise that resolves to a UserDataModel instance representing the user.
    */
   async getUser(userName: string): Promise<UserDataModel> {
-    let response: APIResponse = await this.apiRequest.get(`./user/${userName}`);
+    let response: APIResponse = await this.apiRequest.get(`https://petstore.swagger.io/v2/user/${userName}`, {headers:{
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    }});
 
     await expect(async () => {
       response = await this.apiRequest.get(`./user/${userName}`);

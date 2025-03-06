@@ -25,7 +25,7 @@ export class GoogleSearchPageFlow {
    */
   async goToGoogleSearchPage() {
     // Navigate to the Google homepage
-    await this.page.goto('/');
+    await this.page.goto('https://www.google.com');
     
     // Use the CookiesPopupFlow to accept cookies if the popup appears
     await this.cookiesPopupFlow.acceptCookies();
