@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "playwright-recaptcha-solver": "https://github.com/xrip/puppeteer-recaptcha-solver.git"
-  },  
+  },
   "scripts": {
     "test-ui": "playwright test --ui",
     "test-cli": "playwright test",
